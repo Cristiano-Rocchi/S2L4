@@ -2,8 +2,8 @@
  Scrivi una funzione di nome "area", che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato.
 */
 function area(l1, l2) {
-  const x = l1 * l2;
-  return x;
+  const areaRettangolo = l1 * l2;
+  return areaRettangolo;
 }
 console.log(area(5, 7));
 
@@ -57,7 +57,7 @@ function boundary(numInt) {
 */
 stringa1 = "ciao";
 function epify(stringa) {
-  if (stringa.includes("EPICODE")) {
+  if (stringa.startsWith("EPICODE")) {
     return stringa;
   } else {
     const nuovaStringa = "EPICODE " + stringa;
@@ -91,14 +91,31 @@ console.log(reverseString("EPICODE"));
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function upperFirst(stringa) {
+  let splitStringa = stringa.split(" ");
+  let finale = [];
+  for (let index = 0; index < splitStringa.length; index++) {
+    const primaLettera = splitStringa[index][0].toUpperCase();
+    const testoRestante = splitStringa[index].slice(1);
+    /*  console.log(testoRestante);
+    console.log(primaLettera); */
+    let x = primaLettera + testoRestante;
+    finale.push(x);
+  }
+  console.log(finale.join(" "));
+}
+upperFirst("forza milan");
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
 */
+function cutString(stringa) {
+  const stringArray = stringa.slice(1, -1);
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+  return stringArray;
+}
+console.log(cutString("ciao a tutti"));
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
