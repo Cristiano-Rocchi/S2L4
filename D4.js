@@ -6,7 +6,6 @@ function area(l1, l2) {
   return x;
 }
 console.log(area(5, 7));
-/* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 2
  Scrivi una funzione di nome "crazySum", che riceve due numeri interi come parametri.
@@ -21,29 +20,51 @@ function crazySum(num1, num2) {
   }
 }
 
-/* SCRIVI QUI LA TUA RISPOSTA */
-
 /* ESERCIZIO 3
  Scrivi una funzione di nome "crazyDiff" che calcola la differenza assoluta tra un numero fornito come parametro e 19.
  Deve inoltre tornare la differenza assoluta moltiplicata per tre qualora il numero fornito sia maggiore di 19.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function crazyDiff(num1, num2 = 19) {
+  if (num1 > num2) {
+    const diffAbs3 = Math.abs((num1 - num2) * 3);
+    return diffAbs3;
+  } else {
+    const diffAbs = Math.abs(num1 - num2);
+    return diffAbs;
+  }
+}
+console.log(crazyDiff(20));
 
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
  se n è uguale a 400.
 */
-
-/* SCRIVI QUI LA TUA RISPOSTA */
+function boundary(numInt) {
+  if (numInt > 20 && numInt <= 100) {
+    return true;
+  } else if (numInt === 400) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
  La funzione deve aggiungere la parola "EPICODE" all'inizio della stringa fornita, ma se la stringa fornita comincia già con "EPICODE" allora deve
  ritornare la stringa originale senza alterarla.
 */
-
-/* SCRIVI QUI LA TUA RISPOSTA */
+stringa1 = "ciao";
+function epify(stringa) {
+  if (stringa.includes("EPICODE")) {
+    return stringa;
+  } else {
+    const nuovaStringa = "EPICODE " + stringa;
+    return nuovaStringa;
+  }
+}
+console.log(epify(stringa1));
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
