@@ -1,7 +1,11 @@
 /* ESERCIZIO 1
  Scrivi una funzione di nome "area", che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato.
 */
-
+function area(l1, l2) {
+  const x = l1 * l2;
+  return x;
+}
+console.log(area(5, 7));
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 2
@@ -9,6 +13,13 @@
  La funzione deve ritornare la somma dei due parametri, ma se il valore dei due parametri è il medesimo deve invece tornare
  la loro somma moltiplicata per tre.
 */
+function crazySum(num1, num2) {
+  if (num1 === num2) {
+    return (num1 + num2) * 3;
+  } else {
+    return num1 + num2;
+  }
+}
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
